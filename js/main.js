@@ -32,7 +32,7 @@ myApp.service('dataService', function($http) {
 	    // $http() returns a $promise that we can add handlers with .then()
 	    return $http({
 	        method: 'GET',
-	        url: 'http://dcoeng1-paev-1:8090/stats/search/findByVhidAndDescrAndEnddtBetween',
+	        url: '/stats/search/findByVhidAndDescrAndEnddtBetween',
 	        params: qString
 	     });
 	}
