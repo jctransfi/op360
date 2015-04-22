@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/ui-grid-unstable.css">
+        <link rel="stylesheet" href="css/angular-busy.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body ng-controller="paController">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="wrapper">
+            <div class="header">
+                <div class="logo"><img src="img/logo-white.png" /></div>
+                <div class="wrapper-demo"><!--
+                    --><div id="dd" class="wrapper-dropdown-1" tabindex="1"><!--
+                        --><span>OP360 NMS: Predictive Analytics</span><!--
+                        --><ul class="dropdown" tabindex="1">
+                            <li><a href="#">Predictive Analytics</a></li>
+                            <li><a href="#">Web Console</a></li>
+                            <li><a href="#">Ticket Suppression</a></li>
+                        </ul>
+                    </div>
+                ​</div><!--
+                --><div class="utility-bar">
+                    <div class="profile">
+                        <div class="profile__picture"><img src="img/profile.png"></div>
+                        <div><div class="profile__name">JC Transfiguracion</div><div class="profile__role">Administrator</div></div>
+                    </div>
+                    <div class="logout"><img src="img/logout.png"><br/>Logout</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="navigation">
+                <div class="nav-icon navigation--selected"><a href="#/" class="icon-tdm-active">TDM Data</a></div>
+                <div class="nav-icon"><a href="#about" class="icon-config">Configuration</a></div>
+                <div class="nav-icon"><a href="#contact" class="icon-config">Another Page</a></div>
+                <div class="latest-activity">
+                    Latest Activity
+                </div>
+            </div>
+            <div class="app" ng-view>
+            </div>
+            <div class="push"></div>
+        </div>           
+        <div class="footer">Virtela OP360 Network Management System | Version 0.1 | Copyright 2015, Virtela Services Inc.</div>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/vendor/angular.js"></script>
+        <script src="js/vendor/angular-route.js"></script>
+        <script src="js/vendor/angular-animate.js"></script>
+        <script src="js/vendor/ui-grid-unstable.js"></script>
+        <script src="js/vendor/angular-busy.js"></script>
+        <script src="js/vendor/highcharts.js"></script>
+        <script src="js/vendor/ui-bootstrap-custom-0.12.1.js"></script>
+        <script src="http://code.highcharts.com/modules/data.js"></script>
+        <script src="http://code.highcharts.com/modules/no-data-to-display.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

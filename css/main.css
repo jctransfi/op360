@@ -1,0 +1,698 @@
+/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+/**,
+*:after,
+*:before {
+    box-sizing: border-box;
+}*/
+
+html {
+    color: #222;
+    font-size: 1em;
+    /*line-height: 1.4;*/
+    font-family: 'Lato', sans-serif;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.header {
+    background: #2c3e50;
+    background-image: url(../img/bg-header.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 8px;
+    height: 60px;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -30px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+    height: 30px; /* .push must be the same height as .footer */
+}
+
+.header > div {
+    display: inline-block;
+}
+
+.logo {
+    float: left;
+}
+
+.navigation {
+    background: #16a085;
+    color: #fff !important; 
+    font-size: 0.875em;
+    clear: both;
+}
+
+.navigation--selected {
+    background: #fff;
+    opacity: 0.8;
+    font-weight: 700;
+}
+
+.navigation > .nav-icon {
+    display: inline-block;
+    /*margin: auto 8px;*/
+    padding: 8px;
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    font-size: 0.750em;
+    padding: 0.375em;
+}
+
+.nav-icon {
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;
+}
+
+.icon-config {
+    background-image: url(../img/config.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.icon-tdm {
+    background-image: url(../img/tdm.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.icon-tdm-active {
+    background-image: url(../img/tdm-active.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;
+    color: #d35400;
+    text-decoration: none;
+}
+
+.app-switcher {
+    width: 40%;
+    border: 2px solid #fff;
+    padding: 2px;
+    font-size: 1.5em;
+}
+
+.wrapper-demo {
+    background: url(../img/navicon.png);
+    background-repeat: no-repeat;
+    background-position: 99% 43%;
+    width: 40%;
+    font-size: 1.5em;
+    float: left;
+    height: 56px;
+    margin-left: 12%;
+    padding-top: 10px;
+}
+
+.dropdown {
+    margin-top: 0;
+    padding-left: 0;
+}
+
+.app-dropdown {
+
+}
+
+.app {
+    /*padding: 10px;*/
+}
+
+.padme {
+    padding: 10px;
+}
+
+.latest-activity {
+    float: right;
+    margin-right: 24px;
+}
+
+.utility-bar {
+    float: right;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.utility-bar > div {
+    display: inline-block;
+    vertical-align: inherit;
+}
+
+.profile {
+    margin-right: 18px;
+}
+
+.profile__name {
+    font-size: 0.875em;
+    font-weight: 700;
+}
+
+.profile__role {
+    font-size: 0.750em;
+}
+
+.profile > div {
+    display: inline-block;
+    vertical-align: inherit;
+}
+
+.logout {
+    font-size: 0.500em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#line-chart {
+    /*margin-top: 8px;*/
+}
+
+.data-grid {
+    width: 71%;
+    float: left;
+    border: 1px solid #2980b9;
+}
+
+.data-grid__grid-title {
+    background-color: #2980b9;
+    /*border: 1px solid #2980b9;*/
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    font-size: 1.25em;
+    /*font-weight: 700;*/
+}
+
+.data-summary {
+    width: 28%;
+    float: right;
+}
+
+.data-summary__header {
+    background: #16a085;
+    color: #fff;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.data-summary__header td {
+    padding: 8px !important;
+}
+
+.data-summary table {
+    width: 100%;
+    border: 1px solid #16a085;
+}
+
+.data-summary table td {
+    padding: 5px;
+}
+
+#grid1 {
+    width: 100%;
+    height: 400px;
+}
+
+
+.btn-blue-left {
+    border: none;
+    background-color: #2980b9;
+    background: url(../img/arrow-left.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-blue-right {
+    border: none;
+    background-color: #2980b9;
+    background: url(../img/arrow-right.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 24px;
+    height: 24px;
+}
+
+.pagination-grid {
+    float: right;
+    margin-right: 10px;
+}
+
+.error-totals {
+    background-color: #2980b9;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin: 0 auto;
+    padding: 30px 30px;
+}
+
+.error-totals--number {
+    font-weight: 700;
+    font-size: 3.750em;
+}
+/* ==========================================================================
+   form classes
+   ========================================================================== */
+.filter-box {
+    font-family: 'Open Sans', sans-serif;
+    color: #838383;
+}
+
+.filter-box__form-element {
+    display: inline-block;
+    margin-right: 24px;
+}
+
+
+.filter-box__text-input {
+    border: 1px solid #95a5a6;
+    padding: 5px;
+    font-size: 0.875em
+}
+
+.filter-box label {
+    font-size: 0.750em;
+    font-weight: 700;
+    color: #2c3e50;
+    padding-left: 2px;
+}
+
+.filter-box select {
+    padding: 4px;
+}
+
+.filter-box__text-input--date {
+    background: url(../img/datepicker.png);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+}
+
+.filter-box__text-input--time {
+    background: url(../img/timepicker.png);
+    background-repeat: no-repeat;
+    background-position: 94% center;
+}
+
+
+/* ==========================================================================
+   Color classes
+   ========================================================================== */
+
+.belieze-hole {
+    background-color: #2980b9;
+}
+
+.peter-river {
+    background-color: #3498db;
+}
+
+.midnight-blue {
+    background-color: #2c3e50;
+}
+
+/* ==========================================================================
+   Navigation Dropdown
+   ========================================================================== */
+
+   /* DEMO 1 */
+
+.wrapper-dropdown-1 {
+    /* Size and position */
+    position: relative; /* Enable absolute positionning for children and pseudo elements */
+    /*width: 200px;*/
+    padding: 4px;
+    /*margin: 0 auto;*/
+
+    /* Styles */
+    /*background: #9bc7de;*/
+    border: 2px solid #fff;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+/*.wrapper-dropdown-1:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -6px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent #fff;    
+}*/
+
+.wrapper-dropdown-1 .dropdown {
+    /* Size & position */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 9;
+
+    /* Styles */
+    background: #fff;
+    list-style: none;
+    font-weight: normal; /* Cancels previous font-weight: bold; */
+
+    /* Hiding */
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wrapper-dropdown-1 .dropdown li a {
+    display: block;
+    text-decoration: none;
+    color: #9e9e9e;
+    padding: 10px 20px;
+}
+
+/* Hover state */
+.wrapper-dropdown-1 .dropdown li:hover a {
+    background: #f3f8f8;
+}
+
+/* Active state */
+.wrapper-dropdown-1.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*.wrapper-dropdown-1.active:after {
+    border-color: #fff transparent;
+    border-width: 6px 6px 0 6px ;
+    margin-top: -3px;
+}*/
+
+.wrapper-dropdown-1.active {
+
+}
+
+/* No CSS3 support */
+
+.no-opacity       .wrapper-dropdown-1 .dropdown,
+.no-pointerevents .wrapper-dropdown-1 .dropdown {
+    display: none;
+    opacity: 1; /* If opacity support but no pointer-events support */
+    pointer-events: auto; /* If pointer-events support but no pointer-events support */
+}
+
+.no-opacity       .wrapper-dropdown-1.active .dropdown,
+.no-pointerevents .wrapper-dropdown-1.active .dropdown {
+    display: block;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.clear {
+    clear: both;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

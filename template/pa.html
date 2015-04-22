@@ -1,0 +1,106 @@
+<div class="padme" cg-busy="{promise:promise,message:'Loading Your Data...'}">                
+                <form novalidate>
+                    <div class="filter-box">
+                        <div class="filter-box__form-element">
+                            <label for="vid">Virtela Host ID</label><br/><input ng-model="cpe.vhid" class="filter-box__text-input" type="text" placeholder="CABRCV1-CROCS-RTR-1" />
+                        </div>
+
+                        <div class="filter-box__form-element">
+                            <label for="if-desc">IF Description</label><br/>
+                            <div class="filter-box__if-desc">
+                                <select ng-model="cpe.device" class="filter-box__text-input">
+                                    <option>Serial</option>
+                                    <option>E1</option>
+                                </select>
+                                <input ng-model="cpe.desc1" class="filter-box__text-input" type="text" size="2" placeholder="0" />
+                                <input ng-model="cpe.desc2" class="filter-box__text-input" size="2" type="text" placeholder="0" />
+                                <input ng-model="cpe.desc3" class="filter-box__text-input" type="text" size="2" placeholder="0" />
+                            </div>
+                        </div>
+
+                        <div class="filter-box__form-element">
+                            <label for="start-date-time">Start Date/Time</label><br/>
+                            <div class="filter-box__start-date-time">
+                                <input ng-model="cpe.stdt" class="filter-box__text-input filter-box__text-input--date" type="text" size="12" placeholder="2015-01-01" />
+                                <input ng-model="cpe.sttm" class="filter-box__text-input filter-box__text-input--time" type="text" size="10" placeholder="00:00:00" />
+                            </div>
+                        </div>
+
+                        <div class="filter-box__form-element">
+                            <label for="end-date-time">End Date/Time</label><br/>
+                            <div class="filter-box__start-date-time">
+                                <input ng-model="cpe.enddt" class="filter-box__text-input filter-box__text-input--date" type="text" size="12" placeholder="2015-01-01" />
+                                <input ng-model="cpe.endtm" class="filter-box__text-input filter-box__text-input--time" type="text" size="10" placeholder="00:00:00" />
+                            </div>
+                        </div>
+                        <button ng-click="update(cpe)">GET</button>
+                    </div>
+                </form>
+
+                <div id="line-chart">
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="data-grid">
+                    <div class="data-grid__grid-title">DSX1 Interval Counters</div>
+                    <div id="grid1" ui-grid="gridOptions" ui-grid-pagination class="grid"></div>
+                    <div class="pagination-grid">Current page: {{ gridApi2.pagination.getPage() }} of {{ gridApi2.pagination.getTotalPages() }}
+                        <button type="button" class="btn-blue-left" ng-click="gridApi2.pagination.previousPage()"></button>
+                        <button type="button" class="btn-blue-right" ng-click="gridApi2.pagination.nextPage()"></button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="data-summary">
+                    <table>
+                        <tr class="data-summary__header">
+                            <td colspan="5">Error Summary</td>
+                        </tr>
+                        <tr>
+                            <td>ES</td>
+                            <td><span tooltip-html-unsafe="{{totals.es.instances}}" tooltip-placement="bottom">{{totals.es.count}}</span></td>
+                            <td>DM</td>
+                            <td><span tooltip="{{totals.uas.instances}}" tooltip-placement="bottom">{{totals.dm.count}}</span></td>
+                            <td rowspan="5" class="text-center"><div class="error-totals"><span class="error-totals--number">{{totals.total_err}}</span><br/>Total Errors</div></td>
+                        </tr>
+                        <tr>
+                            <td>UAS</td>
+                            <td><span tooltip="{{totals.uas.instances}}" tooltip-placement="bottom">{{totals.uas.count}}</span></td>
+                            <td>LES</td>
+                            <td><span tooltip="{{totals.les.instances}}" tooltip-placement="bottom">{{totals.les.count}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>PCV</td>
+                            <td><span  tooltip="{{totals.pcv.instances}}" tooltip-placement="bottom">{{totals.pcv.count}}</span></td>
+                            <td>SES</td>
+                            <td><span tooltip="{{totals.ses.instances}}" tooltip-placement="bottom">{{totals.ses.count}}</span></td>
+                            <!--<td>LOS</td>
+                            <td><span tooltip="{{totals.los.instances}}" tooltip-placement="bottom">{{totals.los.count}}</span></td>-->
+                        </tr>
+                        <tr>
+                            <td>SEF</td>
+                            <td><span tooltip="{{totals.sef.instances}}" tooltip-placement="bottom">{{totals.sef.count}}</span></td>
+                            <td>CSS</td>
+                            <td><span tooltip="{{totals.css.instances}}" tooltip-placement="bottom">{{totals.css.count}}</span></td>
+                            <!--<td>LOF</td>
+                            <td><span tooltip="{{totals.lof.instances}}" tooltip-placement="bottom">{{totals.lof.count}}</span></td>-->
+                        </tr>
+                        <tr>
+                            <td>BES</td>
+                            <td colspan="4"><span tooltip="{{totals.bes.instances}}" tooltip-placement="bottom" >{{totals.bes.count}}</span></td>
+                        </tr>
+                        <!--<tr>
+                            <td>REM</td>
+                            <td><span tooltip="{{totals.rem.instances}}" tooltip-trigger="click" tooltip-placement="bottom">{{totals.rem.count}}</span></td>
+                        </tr>
+                        <tr>
+
+                            <td>AIS</td>
+                            <td><span tooltip-html-unsafe="{{totals.ais.instances}}" tooltip-placement="bottom" tooltip-trigger="click">{{totals.ais.count}}</span></td>
+                        </tr>-->
+
+                    </table>
+                </div>
+                <div class="clear"></div>
+</div>
